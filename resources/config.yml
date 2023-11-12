@@ -1,0 +1,132 @@
+taskBossBarInterval: 10
+
+commands:
+  admin: "Commande d'administration"
+  create: "Permet de creer son île"
+  go: "Permet de se téléporter à son île"
+  members: "Permet de voir la liste des membres de son île et leur rank"
+  info: "Donne leur niveau en tiers, le nombre de membres"
+  delete: "Permet de supprimer son île"
+  invite: "Permet d'envoyer une invitation à un joueur pour rejoindre son île"
+  accept: "Permet de rejoindre l'île dans lasquelle on à été inviter"
+  deny: "Permet de refuser l'invitation"
+  top: "Affiche l'île avec le plus grand level de tiers"
+  toppoints: "Affiche l'île avec le plus grand nombre de points"
+  help: "Affiche toutes les commandes du Plugin de OneBlock"
+  leave: "Permet de quitter l'île si on est pas le fondateur de l'île"
+  promote: "Permet de monter en grade un membre de son île"
+  demote: "Permet de dégrader un membre de son île"
+  kick: "Permet de kick un joueur de l'île"
+  visit: "Permet de visiter l'ile d'un joueur"
+  setspawn: "Permet de definir de le point de spawn de l'île"
+  default: "Commande de l'ile"
+  lock: "Permet de verrouiller l'île, elle ne peut plus être visitée"
+  unlock: "Permet de déverrouiller l'île, acceptez que les joueurs la visite"
+
+messages:
+  prefix:
+    success: "§a[§fOneBlock§a] "
+    error: "§c[§fOneBlock§c] "
+
+  # Visitors
+
+  island_locked: "Votre île viens d'être fermé au publique"
+  island_unlocked: "Votre île viens d'être ouvert au publique"
+
+  island_visit_teleported: "Vous venez d'être téléporté à l'île de {OWNER}, vous êtes actuellement en mode de jeu: §f{GAMEMODE}"
+  island_cant_visit: "L'île de §f{OWNER} §cest actuellement fermé au publique, demandez lui d'ouvrir l'île au publique pour pouvoir la visiter"
+  island_kick_to_locked: "L'île viens de fermé ces portes au publique, vous venez d'être téléporté sur votre île"
+  island_kick_locked: "L'île viens de fermé ces portes au publique, vous venez d'être téléporté autre part"
+  island_max_visitors: "Il y a actuellement trop de visiteurs §f({NOW}§l/§r§f{MAX}§f) §csur cette île, attendez que des joueurs partent, pour pouvoir la visiter"
+
+  # Island
+  island_created: "Votre île viens d'être crée avec succès"
+
+  island_deleted: "Votre île viens d'être supprimée avec succès"
+  island_delete_form_title: "Supprimer votre île"
+  island_delete_form_text: "Vous êtes sur le point de supprimer votre île, êtes-vous sûr de vouloir le faire, l'action est §cirréversible§f !"
+  island_delete_form_button_yes: "Oui, je suis sûr"
+  island_delete_form_button_no: "Non, je ne veux pas"
+
+  island_teleported: "Vous avez été téléporté à votre île"
+  island_setspawn_success: "Vous avez définis le point d'apparition sur l'île de {OWNER} au coordonnées: §fX: {X}§a, §fY: {Y}§a, §fZ: {Z}"
+
+  island_already_locked: "Votre île est déjà fermé au publique"
+  island_already_unlocked: "Votre île est déjà ouvert au publique"
+
+  island_kick_success: "Vous venez d'expulser le joueur §f{PLAYER} §ade votre île"
+  island_kicked: "Vous venez d'être expulsé de l'île de §f{OWNER}"
+
+  island_invited: "Vous venez d'inviter le joueur §f{PLAYER} §aà rejoindre votre île"
+  island_invited_by: "Vous venez d'être invité à rejoindre l'île de §f{OWNER}"
+  island_invited_already: "Le joueur §f{PLAYER} §ca déjà une invitation pour rejoindre une île, attendez que celle-ci soit refusée ou expirée"
+  island_invited_accept: "Vous venez de rejoindre l'île de §f{OWNER} §abienvenue !"
+  island_invited_accepted: "Le joueur §f{PLAYER} §aà rejoint l'île !"
+  island_invited_deny: "Vous venez de refuser l'invitation de §f{INVITER} §aà rejoindre son île"
+  island_invited_refused: "Le joueur §f{PLAYER} §cà refusé votre invitation pour rejoindre votre île"
+  island_expired: "Vous n'avez pas de nouvelle invitation pour rejoindre une île, §fou alors §celle a expiré"
+
+  island_owner_left: "Vous ne pouvez pas quitter votre propre ile, vous devez la supprimer la pour pouvoir en rejoindre ou créer une autre"
+  island_left: "Vous venez de quitter l'île de §f{OWNER}"
+
+  # Avaible tags for teleport: {OWNER} {X} {Y} {Z}
+  island_teleport: "Vous venez d'être téléporté !\n§aX: {X} | Y: {Y} | Z: {Z}"
+  island_teleport_type: "tip" # message, popup
+
+  # Other Stuff
+  island_falled_reteleported: "Vous avez été téléporté à votre île suite à une chute dans le vide"
+
+  # Errors
+  island_cant_promote: "Vous ne pouvez pas promouvoir le joueur §f{PLAYER}"
+  island_cant_demote: "Vous ne pouvez pas dégrader le joueur §f{PLAYER}"
+
+  island_promoted: "Vous venez de promouvoir le joueur §f{PLAYER} §aen §f{RANK}"
+  island_demoted: "Vous venez de dégrader le joueur §f{PLAYER} §aen §f{RANK}"
+  island_player_promoted: "Vous avez été promu en §f{RANK}"
+  island_player_demoted: "Vous avez été dégradé en §f{RANK}"
+
+  cant_kick_yourself: "Vous ne pouvez pas vous expulser de votre île"
+  already_in_island: "Vous êtes déjà dans une île, veuillez la quité ou la supprimer avant de créer une nouvelle"
+  dont_have_island: "Vous n'avez pas d'île, veuillez en créer une, ou rejoindre celle d'un autre joueur à l'aide d'une invitation"
+  setspawn_not_in_island: "Téléporter vous sur une île, pour pouvoir définir le point d'apparition de celle-ci"
+  commands_visit: "Vous ne pouvez pas utiliser de commande de ce genre sur une île en tant que visiteur"
+  no_permission: "Vous n'avez pas la permission d'executer la commande §f/is {PERMISSION}§c, vous devez avoir le grade d'île §f{RANK_TO} §cpour pouvoir l'executer, mais vous êtes actuellement en grade d'île §f{RANK_HAVE} §c!"
+  player_not_found: "Le joueur §f{PLAYER} §cn'est actuellement pas connecté ou n'existe pas"
+  kick_failed: "Le joueur §f{PLAYER} §ca un plus grand grade que vous dans une île, vous ne pouvez pas le kick"
+  player_not_member: "Le joueur §f{PLAYER} §cn'est pas membre de votre île"
+  player_island_not_exist: "Le joueur §f{PLAYER} §cne possède ou n'est membre d'aucunes îles"
+  player_island_already: "Le joueur §f{PLAYER} §cpossède déjà ou est déjà membre d'une ile"
+
+  timer_create: "Patientez encore §f{MINUTES} minutes §cet §f{SECONDS} secondes §cavant de pouvoir créer une nouvelle île"
+
+  # Help
+  xp-tip: "§a+1 | {TIER_NAME}\n§f{COUNT} blocs cassées"
+  points-earn-tip: "§a+{PTS_EARN} points"
+  points-lost-tip: "§c-{PTS_LOST} points"
+
+  # Bossbar
+  bb-title: "§aIle de {OWNER}"
+  bb-subtitle: "§f{COUNT} blocs cassées sur {MAX} | {TIER_NAME}"
+
+  help-top: "§a---- Liste des commandes ----"
+  help-line: "§a/is {COMMAND}: §f{DESCRIPTION}"
+
+  # Top
+  # Tags avaibles:
+  # {OWNER} {ID} {OWNER} {TIER_LEVEL} {BLOCKS_BREAKED} {TIER_BLOCKS_TO_BREAK}
+  top-top: "§a---- Classement des îles ----"
+  top-line-maxed: "#{ID} | Ile de {OWNER} avec un Tier de niveau maximum et {BLOCKS_BREAKED} blocs cassés"
+  top-line: "#{ID} | Ile de {OWNER} avec un Tier {TIER_LEVEL} avec {BLOCKS_BREAKED} blocs cassés sur {TIER_BLOCKS_TO_BREAK}"
+
+  points-top-top: "§a---- Classement des îles (par points) ----"
+  points-top-line: "#{ID} | Ile de {OWNER} avec {POINTS} points"
+
+  # Top
+  # Tags avaibles:
+  # {OWNER} {ID} {OWNER} {TIER_LEVEL} {BLOCKS_BREAKED} {TIER_BLOCKS_TO_BREAK}
+  members-top: "§a---- Membres de l'île ----"
+  members-line: "Le joueur §a{PLAYER} est §a{RANK}"
+
+  island-top: "§a---- Ile de {OWNER} ----"
+  island-line: "§fL'Ile est de de §aTier {TIER_LEVEL} §favec §a{BLOCKS_BREAKED} blocs §fcassés !"
+  island-line2: "§fIl y a un total de §a{MEMBERS} membres §fdans l'île"

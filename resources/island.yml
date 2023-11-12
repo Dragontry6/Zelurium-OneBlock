@@ -1,0 +1,89 @@
+start_inventory:
+  - "264:0"
+  - "265:0:64"
+  - "266:0"
+
+# Visitor settings
+visitor_limit: 1
+visitor_build: false
+visitor_destroy: false
+visitor_gamemode: 3 # 0 = survival, 1 = creative, 2 = adventure (DEFAULT), 3 = spectator
+visitor_kick_no_members: true # If it is true then the visitor will be kicked if no island member is on the island
+
+# Farming settings
+jump_break_plants: false
+
+# Island settings
+pvp: false
+
+spawn: # Y - 3 = Bedrock, Y - 2 = Be sure of your coordinates
+  x: 0
+  y: 40
+  z: 0
+
+invitation_expiration_time: 30 # In seconds
+island_cooldown: 1200 # In seconds
+reteleport_at_y: 30
+
+# Avaible:
+# - message
+# - title
+# - tip
+# - popup
+# Avaible tags:
+# {UPPER} for the player be passed the next level
+# {TIER_LEVEL} for the level of tier (Tier ---> III)
+# {TIER_NAME} for the tier name
+tier_up:
+  type: title
+  title: "§a§lNOUVEAU TIER DÉBLOQUER"
+  subtitle: "§aVous avez atteint le §fniveau {TIER_LEVEL} §ade l'île !"
+  # tip: "Niveau supérieur de l'île !"
+  # popup: "Niveau supérieur de l'île !"
+  # message: "Bravo à §f{UPPER}§a, il vient de faire passer l'île au §f{TIER_NAME} §a!"
+
+# Available permissions:
+# break, place, chest_open
+# chest_interact, invite, promote
+# kick, setspawn, delete
+# lock, unlock
+ranks:
+  visitor:
+    name: "Visiteur"
+    permissions: [ ]
+  member:
+    name: "Membre"
+    permissions: [ "break", "place", "chest_open", "chest_interact" ]
+  officer:
+    name: "Sous-chef"
+    permissions: [ "invite", "setspawn", "kick", "promote", "lock", "unlock" ]
+  leader:
+    name: "Chef"
+    permissions: "*"
+
+points:
+  "42:0": 2
+  "57:0": 5
+
+tiers:
+  1:
+    name: "Tier I"
+    breakToUp: 100
+    blocks:
+      - "1:0:50"
+      - "3:0:20"
+      - "5:0:30"
+  2:
+    name: "Tier II"
+    breakToUp: 200
+    blocks:
+      - "1:0:50"
+      - "3:0:40"
+      - "5:0:10"
+  3:
+    name: "Tier III"
+    breakToUp: 300
+    blocks:
+      - "1:0:50"
+      - "3:0:40"
+      - "5:0:10"
