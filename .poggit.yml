@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Dragontry6/Zelurium-OneBlock
+build-by-default: true
+branches:
+- main
+projects:
+  Zelurium-OneBlock:
+    path: ""
+...
